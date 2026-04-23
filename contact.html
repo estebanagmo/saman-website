@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactar — Samán</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">Samán</a>
+      <ul class="nav__links">
+        <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+        <li><a href="index.html#features">¿Por qué Samán?</a></li>
+        <li><a href="contact.html" class="btn btn--sm">Contactar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTACT HERO -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Hablemos</h1>
+      <p>Cuéntanos sobre tu operación y te mostramos cómo Samán puede ayudarte.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT BODY -->
+  <section class="contact-body">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left: info -->
+        <div class="contact-info">
+          <h2>¿Cómo podemos ayudarte?</h2>
+          <p>Completa el formulario y uno de nuestros especialistas se pondrá en contacto contigo en menos de 24 horas.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-item">
+              <span>📧</span>
+              <span>esteban.aguel@agmo.com.co</span>
+            </div>
+            <div class="contact-detail-item">
+              <span>🌐</span>
+              <span>samantech.com.co</span>
+            </div>
+            <div class="contact-detail-item">
+              <span>📍</span>
+              <span>Colombia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-card">
+          <!--
+            To activate: go to https://web3forms.com, enter your email, copy the access key,
+            and replace YOUR_ACCESS_KEY in the hidden field below.
+          -->
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="c1e6fa8e-896b-4ada-a0ab-69b484df344d" />
+            <input type="hidden" name="subject" value="Nuevo contacto desde samantech.com.co" />
+            <input type="checkbox" name="botcheck" style="display:none" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="empresa">Empresa *</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="interes">¿Qué te interesa?</label>
+              <select id="interes" name="interes">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="demo">Ver una demo</option>
+                <option value="pricing">Información de precios</option>
+                <option value="integracion">Integración con mi ERP</option>
+                <option value="financiacion">Financiación en demanda</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu operación de compras..."></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn--primary btn--lg">Enviar mensaje</button>
+            </div>
+
+          </form>
+
+          <div class="form-success" id="form-success">
+            <div class="check">✅</div>
+            <h3>¡Mensaje enviado!</h3>
+            <p>Nos pondremos en contacto contigo en menos de 24 horas.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="nav__logo" style="color:white">Samán</span>
+      <p class="footer__copy">© 2026 Samantech · Automatización de Compras</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
