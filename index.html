@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGMO — Automatización de Compras</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner container">
+      <span class="nav__logo">AGMO</span>
+      <ul class="nav__links">
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#features">Funcionalidades</a></li>
+        <li><a href="#acceso" class="btn btn--sm">Ingresar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="badge">Agente de Compras con IA</span>
+        <h1>Cotiza más rápido.<br />Compra mejor.</h1>
+        <p class="hero__sub">
+          AGMO automatiza el ciclo completo de cotizaciones: contacta proveedores por
+          WhatsApp y correo, extrae precios con IA, compara ofertas y genera órdenes
+          de compra en Contapyme — todo desde un solo panel.
+        </p>
+        <div class="hero__ctas">
+          <a href="https://agmo.samantech.com.co" target="_blank" class="btn btn--primary">
+            Abrir la plataforma
+          </a>
+          <a href="#como-funciona" class="btn btn--ghost">Ver cómo funciona</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__screenshot-frame">
+          <!-- Replace src with an actual screenshot -->
+          <img src="assets/images/dashboard-placeholder.png"
+               alt="Panel de cotizaciones AGMO"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+          <div class="hero__screenshot-placeholder">
+            <span>Captura de pantalla<br />del panel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="steps" id="como-funciona">
+    <div class="container">
+      <h2 class="section-title">Cómo funciona</h2>
+      <p class="section-sub">De la solicitud a la orden de compra en minutos.</p>
+      <ol class="steps__list">
+
+        <li class="step">
+          <div class="step__number">1</div>
+          <div class="step__body">
+            <h3>Solicitud de insumos</h3>
+            <p>Mecánicos, agrónomos o cualquier solicitante envían su requerimiento desde PowerApps.</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step__number">2</div>
+          <div class="step__body">
+            <h3>Contacto automático a proveedores</h3>
+            <p>AGMO selecciona proveedores por categoría y les envía la solicitud de cotización por WhatsApp o correo electrónico.</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step__number">3</div>
+          <div class="step__body">
+            <h3>Extracción de precios con IA</h3>
+            <p>Las respuestas — texto, imágenes o PDFs — son analizadas por modelos de visión (Groq / Llama) que extraen y normalizan los datos automáticamente.</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step__number">4</div>
+          <div class="step__body">
+            <h3>Comparación y selección</h3>
+            <p>El responsable de compras revisa el cuadro comparativo, selecciona los mejores ítems por proveedor y solicita aprobación al gerente.</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step__number">5</div>
+          <div class="step__body">
+            <h3>Generación de orden de compra</h3>
+            <p>Con la aprobación confirmada, AGMO genera la OC directamente en Contapyme y notifica al proveedor.</p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Funcionalidades</h2>
+      <p class="section-sub">Todo lo que necesita el equipo de compras en un solo lugar.</p>
+      <div class="features__grid">
+
+        <div class="feature-card">
+          <div class="feature-card__icon">💬</div>
+          <h3>WhatsApp & Correo</h3>
+          <p>Contacto multicanal con proveedores usando la API de WhatsApp Cloud y correos transaccionales vía Resend.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🤖</div>
+          <h3>Extracción con IA</h3>
+          <p>Pipeline multi-agente (clasificador → extractor → normalizador) que interpreta cualquier formato de cotización recibido.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">📊</div>
+          <h3>Cuadro comparativo</h3>
+          <p>Visualiza todas las ofertas lado a lado, elige ítems por proveedor y detecta diferencias de precio al instante.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🏭</div>
+          <h3>Base de proveedores</h3>
+          <p>Panel CRUD con categorías, NIT, canal preferido y seguimiento de historial de cotizaciones por proveedor.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">✅</div>
+          <h3>Flujo de aprobación</h3>
+          <p>Solicitudes de aprobación enrutadas al gerente vía Power Automate antes de confirmar cualquier compra.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🔗</div>
+          <h3>Integración con Contapyme</h3>
+          <p>Generación automática de órdenes de compra en el ERP una vez aprobadas, sin reingreso manual de datos.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="tech">
+    <div class="container">
+      <h2 class="section-title">Tecnología</h2>
+      <div class="tech__pills">
+        <span class="pill">FastAPI</span>
+        <span class="pill">Python</span>
+        <span class="pill">Groq — Llama 4</span>
+        <span class="pill">WhatsApp Cloud API</span>
+        <span class="pill">Resend</span>
+        <span class="pill">SQLite</span>
+        <span class="pill">Railway</span>
+        <span class="pill">Power Automate</span>
+        <span class="pill">Contapyme</span>
+        <span class="pill">PowerApps</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section class="access" id="acceso">
+    <div class="container access__inner">
+      <h2>¿Listo para automatizar tus compras?</h2>
+      <p>Accede a la plataforma o contacta al equipo de implementación.</p>
+      <div class="access__ctas">
+        <a href="https://agmo.samantech.com.co" target="_blank" class="btn btn--primary btn--lg">
+          Ingresar a AGMO
+        </a>
+        <a href="mailto:esteban.aguel@agmo.com.co" class="btn btn--ghost btn--lg">
+          Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="nav__logo">AGMO</span>
+      <p class="footer__copy">© 2026 Samantech · Automatización de Compras</p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
