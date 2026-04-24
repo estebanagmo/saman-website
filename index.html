@@ -14,7 +14,7 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav__inner container">
-      <span class="nav__logo">Samán</span>
+      <a href="index.html" class="nav__logo"><img src="assets/images/logo-main.jpg" alt="Samán" class="nav__logo-img" /></a>
       <ul class="nav__links">
         <li><a href="#como-funciona">Cómo funciona</a></li>
         <li><a href="#features">¿Por qué Samán?</a></li>
@@ -53,43 +53,57 @@
 
   <!-- VALUE PROPS -->
   <section class="value-props">
-    <div class="container">
-      <div class="value-props__grid">
 
-        <div class="value-prop">
-          <div class="value-prop__number">01</div>
-          <h3>Gana tiempo</h3>
-          <p>Automatiza el ciclo completo de cotizaciones y libera a tu equipo de compras para enfocarse en la negociación y la estrategia.</p>
+    <div class="vp-row">
+      <div class="container vp-row__inner">
+        <div class="vp-row__text">
+          <h2>Gana tiempo de tu equipo</h2>
+          <p>Automatiza el ciclo completo de compras desde cotizaciones hasta facturación. Tu equipo se librará de tareas manuales y por fin podrá enfocarse en planificación, estrategia y negociación.</p>
         </div>
-
-        <div class="value-prop">
-          <div class="value-prop__number">02</div>
-          <h3>Visibilidad total</h3>
-          <p>Compara precios, plazos y condiciones de todos tus proveedores en un solo cuadro. Decide con datos, no con intuición.</p>
+        <div class="vp-row__image">
+          <div class="vp-placeholder">Imagen próximamente</div>
         </div>
-
-        <div class="value-prop">
-          <div class="value-prop__number">03</div>
-          <h3>Financiación en demanda</h3>
-          <p>Accede a opciones de financiación para tus órdenes de compra cuando las necesitas, sin fricciones y directamente desde la plataforma.</p>
-        </div>
-
       </div>
     </div>
+
+    <div class="vp-row vp-row--alt">
+      <div class="container vp-row__inner vp-row__inner--reverse">
+        <div class="vp-row__text">
+          <h2>Visibilidad total</h2>
+          <p>Visualiza el estado de compras. Compara precios, plazos y condiciones de todos tus proveedores en un solo lugar. Decide con datos, no con intuición.</p>
+        </div>
+        <div class="vp-row__image">
+          <div class="vp-placeholder">Imagen próximamente</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vp-row">
+      <div class="container vp-row__inner">
+        <div class="vp-row__text">
+          <h2>Financiación, cuando la necesitas</h2>
+          <p>Accede a opciones de financiación para tus órdenes de compra cuando las necesitas, sin fricciones y directamente desde la plataforma.</p>
+        </div>
+        <div class="vp-row__image">
+          <div class="vp-placeholder">Imagen próximamente</div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- HOW IT WORKS -->
   <section class="steps" id="como-funciona">
     <div class="container">
       <h2 class="section-title">Cómo funciona</h2>
-      <p class="section-sub">De la solicitud a la orden de compra en minutos.</p>
+      <p class="section-sub">Nuestro agente te acompaña desde la requisición hasta facturación.</p>
       <ol class="steps__list">
 
         <li class="step">
           <div class="step__number">1</div>
           <div class="step__body">
-            <h3>Solicitud de insumos</h3>
-            <p>Mecánicos, agrónomos o cualquier solicitante envían su requerimiento desde PowerApps.</p>
+            <h3>Solicitud</h3>
+            <p>Personal en planta, campo o oficina inicia requisición desde nuestra aplicación, o integramos fácilmente con ERPs.</p>
           </div>
         </li>
 
@@ -97,15 +111,15 @@
           <div class="step__number">2</div>
           <div class="step__body">
             <h3>Contacto automático a proveedores</h3>
-            <p>AGMO selecciona proveedores por categoría y les envía la solicitud de cotización por WhatsApp o correo electrónico.</p>
+            <p>Genera solicitud de cotización a múltiples proveedores en 3 clicks.</p>
           </div>
         </li>
 
         <li class="step">
           <div class="step__number">3</div>
           <div class="step__body">
-            <h3>Extracción de precios con IA</h3>
-            <p>Las respuestas — texto, imágenes o PDFs — son analizadas por modelos de visión (Groq / Llama) que extraen y normalizan los datos automáticamente.</p>
+            <h3>Centraliza cotizaciones automáticamente</h3>
+            <p>Nuestro agente lee, extrae y estandariza la información de precio, cantidades y términos — ya sea de texto, imágenes o PDFs, por correo o WhatsApp.</p>
           </div>
         </li>
 
@@ -113,7 +127,7 @@
           <div class="step__number">4</div>
           <div class="step__body">
             <h3>Comparación y selección</h3>
-            <p>El responsable de compras revisa el cuadro comparativo, selecciona los mejores ítems por proveedor y solicita aprobación al gerente.</p>
+            <p>Compara cotizaciones en un solo lugar, selecciona los mejores ítems por proveedor y envía para aprobación.</p>
           </div>
         </li>
 
@@ -121,7 +135,15 @@
           <div class="step__number">5</div>
           <div class="step__body">
             <h3>Generación de orden de compra</h3>
-            <p>Con la aprobación confirmada, AGMO genera la OC directamente en Contapyme y notifica al proveedor.</p>
+            <p>Con la aprobación confirmada, Samán genera la orden de compra y envía al proveedor. Integración con sistemas contables.</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step__number">6</div>
+          <div class="step__body">
+            <h3>Financiación a la medida</h3>
+            <p>Módulo de financiación — factura a factura — en tiempo real.</p>
           </div>
         </li>
 
@@ -138,14 +160,14 @@
 
         <div class="feature-card">
           <div class="feature-card__icon">💬</div>
-          <h3>WhatsApp & Correo</h3>
-          <p>Contacto multicanal con proveedores usando la API de WhatsApp Cloud y correos transaccionales vía Resend.</p>
+          <h3>Multicanal — Correo o WhatsApp</h3>
+          <p>Contacta a tus proveedores de la manera que prefieras.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-card__icon">🤖</div>
-          <h3>Extracción con IA</h3>
-          <p>Pipeline multi-agente (clasificador → extractor → normalizador) que interpreta cualquier formato de cotización recibido.</p>
+          <h3>Extrae y organiza información con IA</h3>
+          <p>Deja atrás los cuadros de Excel llenados manualmente.</p>
         </div>
 
         <div class="feature-card">
@@ -155,42 +177,17 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">🏭</div>
-          <h3>Base de proveedores</h3>
-          <p>Panel CRUD con categorías, NIT, canal preferido y seguimiento de historial de cotizaciones por proveedor.</p>
-        </div>
-
-        <div class="feature-card">
           <div class="feature-card__icon">✅</div>
-          <h3>Flujo de aprobación</h3>
-          <p>Solicitudes de aprobación enrutadas al gerente vía Power Automate antes de confirmar cualquier compra.</p>
+          <h3>Aprueba a tu manera</h3>
+          <p>Flujos de aprobación con automatización — completamente customizables.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-card__icon">🔗</div>
-          <h3>Integración con Contapyme</h3>
-          <p>Generación automática de órdenes de compra en el ERP una vez aprobadas, sin reingreso manual de datos.</p>
+          <h3>Integración con ERPs</h3>
+          <p>Integra tu sistema contable o ERP.</p>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- TECH STACK -->
-  <section class="tech">
-    <div class="container">
-      <h2 class="section-title">Tecnología</h2>
-      <div class="tech__pills">
-        <span class="pill">FastAPI</span>
-        <span class="pill">Python</span>
-        <span class="pill">Groq — Llama 4</span>
-        <span class="pill">WhatsApp Cloud API</span>
-        <span class="pill">Resend</span>
-        <span class="pill">SQLite</span>
-        <span class="pill">Railway</span>
-        <span class="pill">Power Automate</span>
-        <span class="pill">Contapyme</span>
-        <span class="pill">PowerApps</span>
       </div>
     </div>
   </section>
@@ -199,12 +196,9 @@
   <section class="access" id="acceso">
     <div class="container access__inner">
       <h2>¿Listo para automatizar tus compras?</h2>
-      <p>Accede a la plataforma o contacta al equipo de implementación.</p>
+      <p>Contacta a nuestro equipo para un demo.</p>
       <div class="access__ctas">
-        <a href="https://agmo.samantech.com.co" target="_blank" class="btn btn--primary btn--lg">
-          Ingresar a AGMO
-        </a>
-        <a href="mailto:esteban.aguel@agmo.com.co" class="btn btn--ghost btn--lg">
+        <a href="contact.html" class="btn btn--primary btn--lg">
           Contactar
         </a>
       </div>
@@ -214,7 +208,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="nav__logo">AGMO</span>
+      <a href="index.html" class="nav__logo"><img src="assets/images/logo-main.jpg" alt="Samán" class="nav__logo-img" /></a>
       <p class="footer__copy">© 2026 Samantech · Automatización de Compras</p>
     </div>
   </footer>

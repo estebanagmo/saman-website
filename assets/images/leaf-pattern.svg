@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700">
+  <g fill="#2d8c4e">
+    <!-- Large leaves -->
+    <path d="M0,-34 Q20,0 0,34 Q-20,0 0,-34Z" opacity="0.09" transform="translate(65,52) rotate(28)"/>
+    <path d="M0,-28 Q17,0 0,28 Q-17,0 0,-28Z" opacity="0.07" transform="translate(560,80) rotate(-38)"/>
+    <path d="M0,-32 Q19,0 0,32 Q-19,0 0,-32Z" opacity="0.08" transform="translate(490,490) rotate(-28)"/>
+    <path d="M0,-30 Q18,0 0,30 Q-18,0 0,-30Z" opacity="0.06" transform="translate(120,580) rotate(55)"/>
+
+    <!-- Medium leaves -->
+    <path d="M0,-22 Q13,0 0,22 Q-13,0 0,-22Z" opacity="0.08" transform="translate(320,310) rotate(-18)"/>
+    <path d="M0,-20 Q12,0 0,20 Q-12,0 0,-20Z" opacity="0.07" transform="translate(620,220) rotate(42)"/>
+    <path d="M0,-24 Q14,0 0,24 Q-14,0 0,-24Z" opacity="0.06" transform="translate(230,100) rotate(65)"/>
+    <path d="M0,-22 Q13,0 0,22 Q-13,0 0,-22Z" opacity="0.07" transform="translate(440,160) rotate(-55)"/>
+    <path d="M0,-20 Q12,0 0,20 Q-12,0 0,-20Z" opacity="0.06" transform="translate(30,360) rotate(38)"/>
+    <path d="M0,-24 Q14,0 0,24 Q-14,0 0,-24Z" opacity="0.07" transform="translate(660,420) rotate(-22)"/>
+
+    <!-- Small leaves -->
+    <path d="M0,-14 Q8,0 0,14 Q-8,0 0,-14Z" opacity="0.07" transform="translate(180,240) rotate(72)"/>
+    <path d="M0,-12 Q7,0 0,12 Q-7,0 0,-12Z" opacity="0.06" transform="translate(390,60) rotate(-48)"/>
+    <path d="M0,-15 Q9,0 0,15 Q-9,0 0,-15Z" opacity="0.07" transform="translate(570,350) rotate(18)"/>
+    <path d="M0,-13 Q8,0 0,13 Q-8,0 0,-13Z" opacity="0.05" transform="translate(260,470) rotate(-70)"/>
+    <path d="M0,-14 Q8,0 0,14 Q-8,0 0,-14Z" opacity="0.06" transform="translate(680,620) rotate(35)"/>
+    <path d="M0,-11 Q6,0 0,11 Q-6,0 0,-11Z" opacity="0.05" transform="translate(95,155) rotate(-25)"/>
+    <path d="M0,-13 Q8,0 0,13 Q-8,0 0,-13Z" opacity="0.06" transform="translate(420,590) rotate(50)"/>
+  </g>
+</svg>
