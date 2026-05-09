@@ -142,7 +142,7 @@ h3 {
   text-decoration: none;
 }
 .nav__logo-img {
-  height: 56px;
+  height: 45px;
   width: auto;
   display: block;
 }
@@ -510,7 +510,7 @@ h3 {
 .step__number {
   flex-shrink: 0;
   width: 56px;
-  height: 56px;
+  height: 45px;
   border-radius: 50%;
   background: var(--indigo);
   color: var(--white);
@@ -646,6 +646,7 @@ h3 {
   gap: 12px;
 }
 .footer .nav__logo { color: var(--white); font-size: 1.2rem; }
+.footer .nav__logo-img { height: 56px; }
 .footer__copy { color: rgba(255,255,255,.35); font-size: .82rem; }
 
 /* ─── Responsive ───────────────────────────────────────────────────── */
