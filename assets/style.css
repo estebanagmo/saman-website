@@ -249,22 +249,10 @@ h3 {
   box-shadow:
     0 0 0 1px rgba(255,255,255,.08),
     0 32px 80px rgba(0,0,0,.45);
-  background: #ffffff;
+  background: transparent;
   position: relative;
 }
 
-/* Fake browser chrome bar */
-.hero__screenshot-frame::before {
-  content: '';
-  display: block;
-  height: 28px;
-  background: #0d1f36;
-  border-bottom: 1px solid rgba(255,255,255,.06);
-  background-image: radial-gradient(circle 5px at 14px 14px, #ff5f57 0%, #ff5f57 100%),
-                    radial-gradient(circle 5px at 30px 14px, #febc2e 0%, #febc2e 100%),
-                    radial-gradient(circle 5px at 46px 14px, #28c840 0%, #28c840 100%);
-  background-repeat: no-repeat;
-}
 
 .hero__screenshot-frame img { width: 100%; display: block; }
 .hero__screenshot-placeholder {
