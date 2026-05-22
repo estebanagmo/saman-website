@@ -305,6 +305,7 @@ h3 {
 }
 
 .vp-row__image { display: flex; align-items: center; justify-content: center; }
+.vp-row__image img { width: 100%; max-width: 480px; height: auto; }
 
 .vp-placeholder {
   width: 100%;
