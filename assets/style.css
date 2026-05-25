@@ -297,7 +297,7 @@ h3 {
 }
 
 .vp-row__image { display: flex; align-items: center; justify-content: center; }
-.vp-row__image img { width: 100%; max-width: 480px; height: auto; border-radius: 12px; box-shadow: 0 16px 48px rgba(0,0,0,.12); }
+.vp-row__image img { width: 100%; max-width: 480px; height: auto; filter: drop-shadow(0 16px 40px rgba(0,0,0,.12)); }
 
 .vp-placeholder {
   width: 100%;
