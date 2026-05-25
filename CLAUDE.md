@@ -61,3 +61,29 @@ for img_path in images:
 ```
 
 Run with: `py remove_bg.py` (requires Pillow: `pip install pillow`)
+
+### Round image corners (`round_corners.py`)
+
+Used to clip the corners of a PNG to a rounded rectangle, matching the macOS browser window corner curvature. Use this on browser screenshot images that show dark/white corner artifacts from the rectangular PNG bounding box.
+
+```python
+from PIL import Image, ImageDraw
+
+def apply_rounded_corners(path, radius=20):
+    img = Image.open(path).convert("RGBA")
+    w, h = img.size
+
+    mask = Image.new("L", (w, h), 0)
+    draw = ImageDraw.Draw(mask)
+    draw.rounded_rectangle([(0, 0), (w - 1, h - 1)], radius=radius, fill=255)
+
+    img.putalpha(mask)
+    img.save(path, "PNG")
+    print(f"Done: {path} — radius={radius}px on {w}x{h}")
+
+apply_rounded_corners("assets/images/vp-visibilidad.png", radius=20)
+```
+
+Run with: `py round_corners.py` (requires Pillow: `pip install pillow`)
+
+Note: `radius=20` works for 2880×1800 retina screenshots. Adjust if using a different resolution.
