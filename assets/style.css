@@ -244,11 +244,9 @@ h3 {
 .hero__screenshot-frame {
   width: 100%;
   max-width: 500px;
-  box-shadow: 0 16px 48px rgba(0,0,0,.15);
 }
 
-
-.hero__screenshot-frame img { width: 100%; display: block; }
+.hero__screenshot-frame img { width: 100%; display: block; filter: drop-shadow(0 16px 40px rgba(0,0,0,.18)); }
 .hero__screenshot-placeholder {
   display: none;
   height: 280px;
