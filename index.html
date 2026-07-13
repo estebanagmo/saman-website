@@ -87,12 +87,12 @@
       padding-block: 60px;
     }
     h1 {
-      font-size: clamp(2.47rem, 8vw, 5.07rem);
+      font-size: clamp(2rem, 5.5vw, 3.6rem);
       font-weight: 800;
-      line-height: 1.04;
-      letter-spacing: -0.04em;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
       color: var(--text);
-      max-width: 22ch;
+      max-width: 66%;
       margin-bottom: 32px;
     }
     h1 span { color: var(--accent-dark); }
@@ -123,6 +123,7 @@
       .wrap { padding-inline: 24px; }
       .baseline { gap: 18px; }
       .nav-right { gap: 12px; }
+      h1 { max-width: 100%; }
     }
   </style>
 </head>
@@ -169,7 +170,7 @@
 
   <main>
     <div class="wrap">
-      <h1 data-i18n="headline">Simplifica, <span>automatiza</span> y mejora tu margen operativo en tus procesos de compras.</h1>
+      <h1 data-i18n="headline">Simplifica, <span>automatiza</span> y mejora tu margen en procesos de compras.</h1>
       <p class="lede" data-i18n="lede">Reenfoca tu equipo de compras de lo táctico a lo estratégico.</p>
       <a href="contact.html" class="btn btn--lg" data-i18n="cta">Contactar</a>
     </div>
@@ -186,7 +187,7 @@
   <script>
     const i18n = {
       es: {
-        headline: 'Simplifica, <span>automatiza</span> y mejora tu margen operativo en tus procesos de compras.',
+        headline: 'Simplifica, <span>automatiza</span> y mejora tu margen en procesos de compras.',
         lede: 'Reenfoca tu equipo de compras de lo táctico a lo estratégico.',
         cta: 'Contactar',
         p1: 'Simplifica',
@@ -195,7 +196,7 @@
         title: 'Samán — Simplifica y automatiza tus procesos de compras'
       },
       en: {
-        headline: 'Simplify, <span>automate</span> and boost margin on your procurement.',
+        headline: 'Simplify, <span>automate</span> and boost your margin in procurement.',
         lede: 'Uplevel your procurement team from tactical to strategic work.',
         cta: 'Contact us',
         p1: 'Simplify',
