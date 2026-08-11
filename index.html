@@ -9,14 +9,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Paleta compartida con la app (design-system.md — "SaaS Pulido").
+       Púrpura = solo controles que ejecutan algo. Ver assets/style.css. */
     :root {
-      --green: #1a4a30;
-      --accent: #52b788;
-      --accent-dark: #3a9268;
-      --text: #1a2e22;
-      --muted: #78968a;
-      --border: #d8ede3;
-      --surface: #f3faf6;
+      --action:      #4f46e5;
+      --action-hover:#4338ca;
+      --text:        #17181c;
+      --ink:         #4b4e58;
+      --muted:       #6b6f7b;
+      --faint:       #9a9eab;
+      --border:      #e8e9ee;
+      --border2:     #dcdee6;
+      --panel:       #ffffff;
+      --surface:     #f7f8fa;
+      --sel-bg:      #f1f2f6;
     }
     body {
       font-family: 'Inter', system-ui, sans-serif;
@@ -62,24 +68,25 @@
       line-height: 0;
     }
     .lang-btn svg { border-radius: 3px; display: block; width: 21px; height: 14.5px; }
-    .lang-btn:hover { opacity: 0.8; }
+    .lang-btn:hover { opacity: 0.8; background: var(--sel-bg); }
     .lang-btn.active {
       opacity: 1;
-      border-color: var(--accent);
+      background: var(--sel-bg);
+      border-color: var(--action);
     }
     .btn {
       display: inline-flex;
       align-items: center;
       padding: 8px 20px;
       border-radius: 999px;
-      background: var(--green);
+      background: var(--action);
       color: #fff;
       font-weight: 600;
       font-size: 0.84rem;
       text-decoration: none;
       transition: background .2s ease;
     }
-    .btn:hover { background: var(--accent-dark); }
+    .btn:hover { background: var(--action-hover); }
     main {
       flex: 1;
       display: flex;
@@ -95,7 +102,7 @@
       max-width: 66%;
       margin-bottom: 32px;
     }
-    h1 span { color: var(--accent-dark); }
+    h1 span { color: var(--action); }
     .lede {
       font-size: 1.2rem;
       line-height: 1.7;
