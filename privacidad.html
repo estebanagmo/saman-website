@@ -10,19 +10,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Paleta compartida con la app (design-system.md — "SaaS Pulido").
+       Púrpura = solo controles que ejecutan algo; el resto es pizarra. */
     :root {
-      --green: #1a4a30;
-      --accent: #52b788;
-      --accent-dark: #3a9268;
-      --text: #1a2e22;
-      --body: #445c4e;
-      --muted: #78968a;
-      --border: #d8ede3;
-      --surface: #f3faf6;
+      --action:      #4f46e5;
+      --action-hover:#4338ca;
+      --navy:        #4b4e58;
+      --text:        #17181c;
+      --ink:         #4b4e58;
+      --muted:       #6b6f7b;
+      --border:      #e8e9ee;
+      --border2:     #dcdee6;
+      --surface:     #f7f8fa;
     }
     body {
       font-family: 'Inter', system-ui, sans-serif;
-      color: var(--body);
+      color: var(--ink);
       background: #fff;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
@@ -46,20 +49,21 @@
       margin-inline: auto;
       padding-inline: 32px;
     }
+    .nav-inner a { text-decoration: none; }
     .nav-inner img { height: 24px; display: block; }
     .btn {
       display: inline-flex;
       align-items: center;
       padding: 8px 20px;
       border-radius: 999px;
-      background: var(--green);
+      background: var(--action);
       color: #fff;
       font-weight: 600;
       font-size: 0.84rem;
       text-decoration: none;
       transition: background .2s ease;
     }
-    .btn:hover { background: var(--accent-dark); }
+    .btn:hover { background: var(--action-hover); }
 
     main { padding-block: 56px 80px; }
     .doc-head { margin-bottom: 40px; }
@@ -90,13 +94,14 @@
     p { margin-bottom: 14px; }
     ul { margin: 0 0 16px 22px; }
     li { margin-bottom: 8px; }
-    a { color: var(--accent-dark); }
+    a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--action); }
     strong { color: var(--text); font-weight: 600; }
 
     .callout {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
+      border-left: 3px solid var(--border2);
       border-radius: 10px;
       padding: 18px 20px;
       margin: 22px 0;
@@ -125,7 +130,7 @@
     td:first-child { color: var(--text); font-weight: 600; white-space: nowrap; }
 
     footer {
-      background: var(--green);
+      background: var(--navy);
       padding: 28px 0;
       margin-top: 40px;
     }
@@ -139,8 +144,9 @@
       margin-inline: auto;
       padding-inline: 32px;
     }
+    .footer-inner a { text-decoration: none; }
     .footer-inner img { height: 44px; display: block; }
-    .footer-copy { color: rgba(255,255,255,.4); font-size: 0.82rem; }
+    .footer-copy { color: rgba(255,255,255,.5); font-size: 0.82rem; }
 
     @media (max-width: 600px) {
       .wrap, .nav-inner, .footer-inner { padding-inline: 22px; }

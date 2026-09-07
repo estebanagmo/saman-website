@@ -87,3 +87,59 @@ apply_rounded_corners("assets/images/vp-visibilidad.png", radius=20)
 Run with: `py round_corners.py` (requires Pillow: `pip install pillow`)
 
 Note: `radius=20` works for 2880×1800 retina screenshots. Adjust if using a different resolution.
+
+### Recolor the wordmark (`recolor_logo.py`)
+
+`logo-saman.png` is a flat single-color wordmark. This swaps its color while keeping the
+antialiased letter edges intact (it rewrites RGB and leaves the alpha channel alone).
+Used to move the logo off the old green onto the shared palette.
+
+```python
+from PIL import Image
+import numpy as np
+
+def recolor(path, hex_color, out=None):
+    r, g, b = (int(hex_color.lstrip("#")[i:i+2], 16) for i in (0, 2, 4))
+    img = Image.open(path).convert("RGBA")
+    data = np.array(img)
+
+    # Replace RGB everywhere, keep alpha so the antialiased edges survive.
+    data[:, :, 0] = r
+    data[:, :, 1] = g
+    data[:, :, 2] = b
+
+    Image.fromarray(data).save(out or path, "PNG")
+    print(f"Recolored {out or path} -> {hex_color}")
+
+recolor("assets/images/logo-saman.png", "#17181c")
+```
+
+Run with: `py recolor_logo.py` (requires Pillow: `pip install pillow`)
+
+Note: `logo-saman-white.png` is the same shape in pure white, for dark backgrounds
+(the footer) — leave it as is.
+
+## Color palette
+
+Both pages share the app's design system ("SaaS Pulido" —
+`C:\Users\EstebanAguel\saman\design\design-system.md`). Tokens live in the `:root` of
+`index.html` (inline) and `assets/style.css`. Keep the two in sync.
+
+| Token | Hex | Role |
+|---|---|---|
+| `--action` | `#4f46e5` | Purple — action controls (buttons, active language toggle) |
+| `--action-hover` | `#4338ca` | Action hover |
+| `--text` | `#17181c` | Headings and the logo |
+| `--ink` / `--navy` | `#4b4e58` | Slate — dark fills (footer, contact hero). Never pure black. |
+| `--muted` | `#6b6f7b` | Body copy |
+| `--faint` | `#9a9eab` | Labels, timestamps |
+| `--border` | `#e8e9ee` | Dividers |
+| `--border2` | `#dcdee6` | Control borders (inputs, ghost buttons) |
+| `--surface` | `#f7f8fa` | Page background |
+| `--sel-bg` / `--blue-light` | `#f1f2f6` | Neutral selection/emphasis |
+
+The app reserves purple strictly for action controls, but the homepage headline
+deliberately breaks that rule: "automatiza" is `--action` (explicit request 2026-08-11).
+
+Bump the `?v=` cache buster on the `style.css` link in `contact.html` whenever the
+stylesheet changes.
