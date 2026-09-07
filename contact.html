@@ -149,7 +149,7 @@
       <a href="index.html" class="nav__logo"><img src="assets/images/logo-saman-white.png" alt="Samán" class="nav__logo-img" /></a>
       <p class="footer__copy">
         <span data-i18n="footer">© 2026 Samantech · Automatización de Compras</span>
-        · <a href="privacidad.html" class="footer__legal" data-i18n="privacy">Política de privacidad</a>
+        · <a href="privacidad.html" class="footer__legal" data-privacy data-i18n="privacy">Política de privacidad</a>
       </p>
     </div>
   </footer>
@@ -216,6 +216,11 @@
       });
       document.querySelectorAll('[data-i18n-ph]').forEach(el => {
         el.placeholder = t[el.dataset.i18nPh];
+      });
+      /* La política de privacidad son dos documentos, no un texto traducible:
+         el enlace apunta al que corresponde al idioma elegido. */
+      document.querySelectorAll('[data-privacy]').forEach(a => {
+        a.href = lang === 'en' ? 'privacy.html' : 'privacidad.html';
       });
       document.documentElement.lang = lang;
       document.title = t.title;
