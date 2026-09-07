@@ -103,6 +103,18 @@
       margin-bottom: 44px;
     }
     .btn--lg { padding: 13px 36px; font-size: 0.95rem; }
+    .site-foot {
+      padding-block: 20px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .site-foot a {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity .2s ease;
+    }
+    .site-foot a:hover { opacity: 1; text-decoration: underline; }
     @media (max-width: 600px) {
       .wrap { padding-inline: 24px; }
       .nav-right { gap: 12px; }
@@ -159,18 +171,24 @@
     </div>
   </main>
 
+  <footer class="wrap site-foot">
+    <a href="privacidad.html" data-i18n="privacy">Política de privacidad</a>
+  </footer>
+
   <script>
     const i18n = {
       es: {
         headline: 'Simplifica, <span>automatiza</span> y mejora tu margen en procesos de compras.',
         lede: 'Reenfoca tu equipo de compras de lo táctico a lo estratégico.',
         cta: 'Contáctanos',
+        privacy: 'Política de privacidad',
         title: 'Samán — Simplifica y automatiza tus procesos de compras'
       },
       en: {
         headline: 'Simplify, <span>automate</span> and boost your margin in procurement.',
         lede: 'Uplevel your procurement team from tactical to strategic work.',
         cta: 'Contact us',
+        privacy: 'Privacy policy',
         title: 'Samán — Simplify and automate your procurement'
       }
     };
