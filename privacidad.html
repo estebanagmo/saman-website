@@ -128,6 +128,15 @@
     a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
     a:hover { color: var(--action); }
     strong { color: var(--text); font-weight: 600; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      overflow-wrap: anywhere;
+    }
 
     .callout {
       background: var(--surface);
@@ -321,18 +330,39 @@
     Fuera de esta lista, no compartimos datos con terceros, salvo que la ley o una
     autoridad competente nos obligue a hacerlo.</p>
 
+    <h3>Sobre la integración con WhatsApp</h3>
+    <p>Samán se integra con la <strong>WhatsApp Business Platform</strong> de Meta
+    (Cloud API) para escribirle a los proveedores en nombre de la empresa cliente.
+    Con el permiso <code>whatsapp_business_messaging</code> enviamos y recibimos
+    mensajes; con <code>whatsapp_business_management</code> registramos y
+    consultamos las plantillas de mensaje y el estado de los números de la cuenta
+    de WhatsApp Business de esa empresa. Los datos que pasan por ahí son los
+    descritos en la sección 1: el teléfono del proveedor, el texto de los mensajes
+    y sus archivos adjuntos. <strong>Todo envío lo confirma antes una persona de la
+    empresa cliente</strong>; Samán no manda mensajes sin esa aprobación.</p>
+
     <h2>5. Separación entre clientes</h2>
     <p>Los datos de cada empresa cliente están aislados de los de las demás a
     nivel de base de datos. Ningún usuario de una empresa puede ver los pedidos,
     proveedores ni conversaciones de otra.</p>
 
-    <h2>6. Cuánto tiempo los conservamos</h2>
+    <h2 id="borrado">6. Cuánto tiempo los conservamos y cómo pedir que se borren</h2>
     <p>Conservamos los datos <strong>mientras la cuenta de la empresa cliente esté
     activa, y hasta 90 días después de cerrarla</strong>. Pasado ese plazo los
     eliminamos de nuestros sistemas de producción.</p>
     <p>Una empresa cliente puede pedir antes la eliminación de sus datos, o una
     copia de ellos, escribiéndonos al correo de contacto. Atendemos la solicitud
     dentro de los 15 días hábiles siguientes.</p>
+
+    <div class="callout">
+      <p><strong>Cómo pedir que borremos sus datos.</strong> Cualquier persona
+      —un usuario de una empresa cliente, o un proveedor contactado a través de
+      Samán— puede pedir que eliminemos sus datos personales escribiendo a
+      <a href="mailto:esteban@samantech.com.co">esteban@samantech.com.co</a> con el
+      asunto «Eliminación de datos». <strong>No cobramos por esto.</strong>
+      Respondemos dentro de los 15 días hábiles siguientes y confirmamos por
+      escrito cuando el borrado se completa.</p>
+    </div>
 
     <h2>7. Sus derechos</h2>
     <p>De acuerdo con la Ley 1581 de 2012 y sus decretos reglamentarios (Colombia),

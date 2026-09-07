@@ -128,6 +128,15 @@
     a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
     a:hover { color: var(--action); }
     strong { color: var(--text); font-weight: 600; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      overflow-wrap: anywhere;
+    }
 
     .callout {
       background: var(--surface);
@@ -322,18 +331,40 @@
     Outside this list, we do not share data with third parties, unless the law or
     a competent authority requires us to.</p>
 
+    <h3>About the WhatsApp integration</h3>
+    <p>Samán integrates with Meta's <strong>WhatsApp Business Platform</strong>
+    (Cloud API) in order to message suppliers on behalf of the customer company.
+    The <code>whatsapp_business_messaging</code> permission is used to send and
+    receive messages; <code>whatsapp_business_management</code> is used to register
+    and read the message templates and the phone number status of that company's
+    WhatsApp Business Account. The data that passes through it is the data
+    described in section 1: the supplier's phone number, the text of the messages
+    and their attachments. <strong>Every send is confirmed beforehand by a person
+    at the customer company</strong>; Samán does not send messages without that
+    approval.</p>
+
     <h2>5. Separation between customers</h2>
     <p>Each customer company's data is isolated from every other customer's at the
     database level. No user of one company can see another company's purchase
     requests, suppliers or conversations.</p>
 
-    <h2>6. How long we keep it</h2>
+    <h2 id="deletion">6. How long we keep it, and how to request deletion</h2>
     <p>We keep data <strong>for as long as the customer company's account is
     active, and for up to 90 days after it is closed</strong>. After that period we
     delete it from our production systems.</p>
     <p>A customer company may request deletion of its data, or a copy of it,
     earlier by writing to the contact address. We respond to such requests within
     15 business days.</p>
+
+    <div class="callout">
+      <p><strong>How to request that we delete your data.</strong> Any individual
+      — a user at a customer company, or a supplier contacted through Samán —
+      may request deletion of their personal data by writing to
+      <a href="mailto:esteban@samantech.com.co">esteban@samantech.com.co</a> with
+      the subject "Data deletion". <strong>We do not charge for this.</strong> We
+      respond within 15 business days and confirm in writing once the deletion is
+      complete.</p>
+    </div>
 
     <h2>7. Your rights</h2>
     <p>Under Colombia's Law 1581 of 2012 and its implementing decrees, you may
