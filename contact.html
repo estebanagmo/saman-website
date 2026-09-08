@@ -150,6 +150,7 @@
       <p class="footer__copy">
         <span data-i18n="footer">© 2026 Samantech · Automatización de Compras</span>
         · <a href="privacidad.html" class="footer__legal" data-privacy data-i18n="privacy">Política de privacidad</a>
+        · <a href="terminos.html" class="footer__legal" data-terms data-i18n="terms">Términos del servicio</a>
       </p>
     </div>
   </footer>
@@ -181,6 +182,7 @@
         okSub: 'Nos pondremos en contacto contigo en menos de 24 horas.',
         footer: '© 2026 Samantech · Automatización de Compras',
         privacy: 'Política de privacidad',
+        terms: 'Términos del servicio',
         title: 'Contactar — Samán'
       },
       en: {
@@ -205,6 +207,7 @@
         okSub: 'We will get in touch within 24 hours.',
         footer: '© 2026 Samantech · Procurement Automation',
         privacy: 'Privacy policy',
+        terms: 'Terms of service',
         title: 'Contact — Samán'
       }
     };
@@ -221,6 +224,9 @@
          el enlace apunta al que corresponde al idioma elegido. */
       document.querySelectorAll('[data-privacy]').forEach(a => {
         a.href = lang === 'en' ? 'privacy.html' : 'privacidad.html';
+      });
+      document.querySelectorAll('[data-terms]').forEach(a => {
+        a.href = lang === 'en' ? 'terms.html' : 'terminos.html';
       });
       document.documentElement.lang = lang;
       document.title = t.title;

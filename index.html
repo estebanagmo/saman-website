@@ -122,6 +122,7 @@
       transition: opacity .2s ease;
     }
     .site-foot a:hover { opacity: 1; text-decoration: underline; }
+    .site-foot-sep { opacity: 0.4; margin-inline: 6px; }
     @media (max-width: 600px) {
       .wrap { padding-inline: 24px; }
       .nav-right { gap: 12px; }
@@ -180,6 +181,8 @@
 
   <footer class="wrap site-foot">
     <a href="privacidad.html" data-privacy data-i18n="privacy">Política de privacidad</a>
+    <span class="site-foot-sep">·</span>
+    <a href="terminos.html" data-terms data-i18n="terms">Términos del servicio</a>
   </footer>
 
   <script>
@@ -189,6 +192,7 @@
         lede: 'Reenfoca tu equipo de compras de lo táctico a lo estratégico.',
         cta: 'Contáctanos',
         privacy: 'Política de privacidad',
+        terms: 'Términos del servicio',
         title: 'Samán — Simplifica y automatiza tus procesos de compras'
       },
       en: {
@@ -196,6 +200,7 @@
         lede: 'Uplevel your procurement team from tactical to strategic work.',
         cta: 'Contact us',
         privacy: 'Privacy policy',
+        terms: 'Terms of service',
         title: 'Samán — Simplify and automate your procurement'
       }
     };
@@ -209,6 +214,9 @@
          el enlace apunta al que corresponde al idioma elegido. */
       document.querySelectorAll('[data-privacy]').forEach(a => {
         a.href = lang === 'en' ? 'privacy.html' : 'privacidad.html';
+      });
+      document.querySelectorAll('[data-terms]').forEach(a => {
+        a.href = lang === 'en' ? 'terms.html' : 'terminos.html';
       });
       document.documentElement.lang = lang;
       document.title = t.title;

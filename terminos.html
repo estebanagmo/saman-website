@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos del servicio — Samán</title>
+  <meta name="description" content="Las condiciones bajo las que Samantech presta el servicio de Samán a las empresas que lo contratan." />
+  <link rel="alternate" hreflang="es" href="https://samantech.com.co/terminos" />
+  <link rel="alternate" hreflang="en" href="https://samantech.com.co/terms" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Paleta compartida con la app (design-system.md — "SaaS Pulido").
+       Púrpura = solo controles que ejecutan algo; el resto es pizarra. */
+    :root {
+      --action:      #4f46e5;
+      --action-hover:#4338ca;
+      --navy:        #4b4e58;
+      --text:        #17181c;
+      --ink:         #4b4e58;
+      --muted:       #6b6f7b;
+      --border:      #e8e9ee;
+      --border2:     #dcdee6;
+      --surface:     #f7f8fa;
+      --sel-bg:      #f1f2f6;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 780px;
+      margin-inline: auto;
+      padding-inline: 32px;
+    }
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: 14px;
+      max-width: 1080px;
+      margin-inline: auto;
+      padding-inline: 32px;
+    }
+    .nav-inner a { text-decoration: none; }
+    .nav-inner img { height: 24px; display: block; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-btn {
+      display: inline-flex;
+      padding: 4px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      background: none;
+      cursor: pointer;
+      opacity: 0.45;
+      transition: opacity .2s ease, border-color .2s ease;
+      line-height: 0;
+    }
+    .lang-btn svg { border-radius: 3px; display: block; width: 21px; height: 14.5px; }
+    .lang-btn:hover { opacity: 0.8; background: var(--sel-bg); }
+    .lang-btn.active {
+      opacity: 1;
+      background: var(--sel-bg);
+      border-color: var(--action);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 20px;
+      border-radius: 999px;
+      background: var(--action);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.84rem;
+      text-decoration: none;
+      transition: background .2s ease;
+    }
+    .btn:hover { background: var(--action-hover); }
+
+    main { padding-block: 56px 80px; }
+    .doc-head { margin-bottom: 40px; }
+    h1 {
+      font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .updated { color: var(--muted); font-size: 0.9rem; }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-top: 44px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 26px;
+      margin-bottom: 6px;
+    }
+    p { margin-bottom: 14px; }
+    ul { margin: 0 0 16px 22px; }
+    li { margin-bottom: 8px; }
+    a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { color: var(--action); }
+    strong { color: var(--text); font-weight: 600; }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--border2);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 22px 0;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    footer {
+      background: var(--navy);
+      padding: 28px 0;
+      margin-top: 40px;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      max-width: 1080px;
+      margin-inline: auto;
+      padding-inline: 32px;
+    }
+    .footer-inner a { text-decoration: none; }
+    .footer-inner img { height: 44px; display: block; }
+    .footer-copy { color: rgba(255,255,255,.5); font-size: 0.82rem; }
+
+    @media (max-width: 600px) {
+      .wrap, .nav-inner, .footer-inner { padding-inline: 22px; }
+      .nav-right { gap: 12px; }
+      main { padding-block: 36px 56px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html"><img src="assets/images/logo-saman.png" alt="Samán" /></a>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <!-- Cada bandera navega a la otra versión del documento y deja el
+               idioma en localStorage, la misma clave que usan index y contact. -->
+          <a class="lang-btn active" href="terminos.html" onclick="rememberLang('es')" aria-label="Español" title="Español" aria-current="page">
+            <!-- Spain flag -->
+            <svg width="26" height="18" viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg">
+              <rect width="26" height="18" fill="#AA151B"/>
+              <rect y="4.5" width="26" height="9" fill="#F1BF00"/>
+            </svg>
+          </a>
+          <a class="lang-btn" href="terms.html" onclick="rememberLang('en')" aria-label="English" title="English">
+            <!-- US flag -->
+            <svg width="26" height="18" viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg">
+              <rect width="26" height="18" fill="#FFFFFF"/>
+              <g fill="#B22234">
+                <rect y="0" width="26" height="1.385"/>
+                <rect y="2.77" width="26" height="1.385"/>
+                <rect y="5.54" width="26" height="1.385"/>
+                <rect y="8.31" width="26" height="1.385"/>
+                <rect y="11.08" width="26" height="1.385"/>
+                <rect y="13.85" width="26" height="1.385"/>
+                <rect y="16.62" width="26" height="1.385"/>
+              </g>
+              <rect width="11" height="9.7" fill="#3C3B6E"/>
+              <g fill="#FFFFFF">
+                <circle cx="2" cy="1.8" r="0.55"/><circle cx="4.5" cy="1.8" r="0.55"/><circle cx="7" cy="1.8" r="0.55"/><circle cx="9.5" cy="1.8" r="0.55"/>
+                <circle cx="3.25" cy="3.5" r="0.55"/><circle cx="5.75" cy="3.5" r="0.55"/><circle cx="8.25" cy="3.5" r="0.55"/>
+                <circle cx="2" cy="5.2" r="0.55"/><circle cx="4.5" cy="5.2" r="0.55"/><circle cx="7" cy="5.2" r="0.55"/><circle cx="9.5" cy="5.2" r="0.55"/>
+                <circle cx="3.25" cy="6.9" r="0.55"/><circle cx="5.75" cy="6.9" r="0.55"/><circle cx="8.25" cy="6.9" r="0.55"/>
+                <circle cx="2" cy="8.4" r="0.55"/><circle cx="4.5" cy="8.4" r="0.55"/><circle cx="7" cy="8.4" r="0.55"/><circle cx="9.5" cy="8.4" r="0.55"/>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <a href="contact.html" class="btn">Contáctanos</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <div class="doc-head">
+      <h1>Términos del servicio</h1>
+      <p class="updated">Última actualización: 7 de septiembre de 2026 · <a href="terms.html">English version</a></p>
+    </div>
+
+    <p>Estos términos regulan el uso de <strong>Samán</strong>, la plataforma de
+    compras que opera <strong>Samantech</strong> (Colombia). Al crear una cuenta
+    o usar el servicio, la empresa cliente y sus usuarios aceptan lo que sigue.</p>
+
+    <p>Samán es un servicio <strong>entre empresas</strong>. No está dirigido a
+    consumidores ni a menores de edad.</p>
+
+    <h2>1. Qué es el servicio</h2>
+    <p>Samán le permite a una empresa gestionar su proceso de compras: registrar
+    pedidos internos, solicitar cotizaciones a sus proveedores por correo
+    electrónico y por WhatsApp, leer y comparar las respuestas, y dejar registro
+    de las aprobaciones y de las órdenes de compra resultantes.</p>
+    <p>Parte del procesamiento —la lectura de cotizaciones y la clasificación de
+    mensajes— lo hacen modelos de lenguaje de terceros. Cómo funciona eso y qué
+    datos implica está en la
+    <a href="privacidad.html">política de privacidad</a>, que forma parte de
+    estos términos.</p>
+
+    <h2>2. Cuentas y usuarios</h2>
+    <p>La empresa cliente es responsable de a quién le da acceso, de los roles
+    que le asigna y de mantener sus credenciales seguras. Cada usuario responde
+    por la actividad de su propia cuenta.</p>
+    <p>La empresa cliente debe avisarnos sin demora si sospecha un acceso no
+    autorizado.</p>
+
+    <h2>3. Uso aceptable</h2>
+    <p>La empresa cliente y sus usuarios se comprometen a no:</p>
+    <ul>
+      <li>usar Samán para nada ilegal, ni para actividades que infrinjan derechos
+      de terceros;</li>
+      <li>enviar mensajes no solicitados en masa, publicidad o spam a través del
+      servicio;</li>
+      <li>cargar datos de personas sin tener la autorización necesaria para
+      tratarlos;</li>
+      <li>intentar vulnerar el servicio, acceder a datos de otra empresa cliente,
+      o eludir los límites de uso;</li>
+      <li>revender el servicio o dar acceso a terceros ajenos a la empresa sin
+      acuerdo previo por escrito.</li>
+    </ul>
+
+    <h2>4. Mensajes a proveedores</h2>
+    <div class="callout">
+      <p><strong>Los mensajes son de la empresa cliente, no nuestros.</strong>
+      Samán los envía en su nombre, y <strong>siempre después de que una persona
+      de esa empresa los confirma</strong>. No hay envío automático sin
+      aprobación humana.</p>
+      <p>En consecuencia, la empresa cliente es responsable de tener una relación
+      comercial legítima con los proveedores a los que escribe, de la exactitud
+      de los teléfonos y correos que carga, y del contenido de los mensajes.</p>
+    </div>
+    <p>Cuando los mensajes salen por WhatsApp, la empresa cliente debe cumplir
+    además las políticas de Meta aplicables a la WhatsApp Business Platform,
+    incluida su Política de Mensajería Empresarial. Un incumplimiento de esas
+    políticas puede llevar a que Meta restrinja el número o la cuenta de la
+    empresa cliente, y eso escapa a nuestro control.</p>
+    <p>La empresa cliente autoriza a Samantech a conectar y operar su cuenta de
+    WhatsApp Business —registrar y consultar plantillas de mensaje, leer el
+    estado de sus números y enviar y recibir mensajes— con el único fin de
+    prestarle este servicio.</p>
+
+    <h2>5. De quién son los datos</h2>
+    <p>Los datos que la empresa cliente carga o genera en Samán —proveedores,
+    pedidos, cotizaciones, conversaciones y órdenes de compra— <strong>son de
+    ella</strong>. Samantech los trata como encargado, para prestarle el
+    servicio, según la <a href="privacidad.html">política de privacidad</a>.</p>
+    <p>La empresa cliente puede pedir una copia de sus datos, o su eliminación,
+    en cualquier momento, escribiendo al correo de la sección 11.</p>
+
+    <h2>6. Disponibilidad y cambios</h2>
+    <p>Trabajamos para que el servicio esté disponible y funcione bien, pero
+    <strong>no ofrecemos un nivel de servicio garantizado</strong> salvo que se
+    pacte por escrito en un acuerdo aparte. Puede haber interrupciones por
+    mantenimiento, por fallas de terceros de los que dependemos, o por causas
+    fuera de nuestro control.</p>
+    <p>Samán está en desarrollo activo: agregamos, cambiamos y a veces retiramos
+    funcionalidades. Los cambios que afecten de forma significativa el uso del
+    servicio se avisan con antelación razonable.</p>
+
+    <h2>7. Condiciones comerciales</h2>
+    <p>El precio, la forma de pago, la duración y cualquier compromiso de nivel
+    de servicio se pactan por escrito con cada empresa cliente en un acuerdo
+    aparte. Si no hay acuerdo escrito, el acceso se entiende otorgado a título de
+    prueba o piloto, sin costo y sin compromiso de permanencia por ninguna de las
+    dos partes.</p>
+
+    <h2>8. Propiedad intelectual</h2>
+    <p>El software, la marca Samán y todo lo que compone la plataforma son de
+    Samantech. Estos términos otorgan a la empresa cliente un derecho de uso
+    limitado, no exclusivo e intransferible mientras la cuenta esté vigente — no
+    le transfieren la propiedad de nada.</p>
+    <p>Lo que la empresa cliente carga sigue siendo suyo, como dice la sección 5.</p>
+
+    <h2>9. Limitación de responsabilidad</h2>
+    <p>Samán es una herramienta de apoyo al proceso de compras. <strong>Las
+    decisiones de compra, las aprobaciones y las órdenes que de ellas resulten
+    son de la empresa cliente</strong>, incluso cuando se apoyen en
+    recomendaciones o en datos extraídos automáticamente de una cotización. El
+    servicio puede equivocarse al leer un documento; por eso toda acción con
+    efecto exige confirmación humana.</p>
+    <p>En la medida en que la ley lo permita, Samantech no responde por lucro
+    cesante, pérdida de oportunidad ni daños indirectos, y su responsabilidad
+    total frente a la empresa cliente se limita a lo que ésta haya pagado por el
+    servicio en los doce meses anteriores al hecho que dé origen al reclamo.</p>
+
+    <h2>10. Terminación</h2>
+    <p>Cualquiera de las dos partes puede terminar la relación en cualquier
+    momento, avisando por escrito. Samantech puede suspender el acceso de
+    inmediato si hay un uso que incumpla la sección 3 o que ponga en riesgo el
+    servicio o a terceros.</p>
+    <p>Al cerrarse una cuenta, los datos se conservan y se eliminan según el
+    plazo de la <a href="privacidad.html#borrado">política de privacidad</a>:
+    hasta 90 días después del cierre.</p>
+
+    <h2>11. Ley aplicable y contacto</h2>
+    <p>Estos términos se rigen por las leyes de la República de Colombia, y
+    cualquier controversia se somete a los jueces competentes de Colombia.</p>
+    <ul>
+      <li><strong>Correo:</strong> <a href="mailto:esteban@samantech.com.co">esteban@samantech.com.co</a></li>
+      <li><strong>Sitio:</strong> <a href="https://samantech.com.co">samantech.com.co</a></li>
+      <li><strong>Ubicación:</strong> Colombia</li>
+    </ul>
+
+    <h2>12. Cambios a estos términos</h2>
+    <p>Si cambiamos estos términos, actualizamos la fecha del encabezado y
+    publicamos la nueva versión en esta misma dirección. Los cambios de fondo se
+    avisan además a las empresas clientes. Seguir usando el servicio después de
+    un cambio significa aceptarlo.</p>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html"><img src="assets/images/logo-saman-white.png" alt="Samán" /></a>
+      <p class="footer-copy">© 2026 Samantech · Automatización de Compras</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Guarda el idioma en la misma clave que usan index.html y contact.html,
+       para que la elección hecha aquí se mantenga al navegar al resto del sitio. */
+    function rememberLang(lang) {
+      try { localStorage.setItem('saman-lang', lang); } catch (e) {}
+    }
+  </script>
+
+</body>
+</html>
