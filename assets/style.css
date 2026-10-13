@@ -166,6 +166,7 @@ h3 {
 /* Los enlaces de navegación no son acciones: no llevan púrpura. */
 .nav__links a:hover { color: var(--text); }
 .nav__links a.btn:hover { color: var(--white); }
+.nav__links a.btn--primary { color: var(--white); }
 
 /* Selector de idioma — mismo control que el de index.html (que lo lleva inline
    porque esa página es autocontenida). Cambiar uno implica cambiar el otro. */

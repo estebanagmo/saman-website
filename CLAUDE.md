@@ -123,7 +123,8 @@ Note: `logo-saman-white.png` is the same shape in pure white, for dark backgroun
 
 Both pages share the app's design system ("SaaS Pulido" —
 `C:\Users\EstebanAguel\saman\design\design-system.md`). Tokens live in the `:root` of
-`index.html` (inline) and `assets/style.css`. Keep the two in sync.
+`assets/style.css` (used by `index.html`, `encuesta2026.html`, `contact.html`, `404.html`)
+and inline in the legal pages (`privacidad`, `privacy`, `terminos`, `terms`). Keep them in sync.
 
 | Token | Hex | Role |
 |---|---|---|
@@ -138,8 +139,14 @@ Both pages share the app's design system ("SaaS Pulido" —
 | `--surface` | `#f7f8fa` | Page background |
 | `--sel-bg` / `--blue-light` | `#f1f2f6` | Neutral selection/emphasis |
 
-The app reserves purple strictly for action controls, but the homepage headline
-deliberately breaks that rule: "automatiza" is `--action` (explicit request 2026-08-11).
+The app reserves purple strictly for action controls. (The old homepage headline broke
+that rule with a purple word; the 2026-10 "back-office financiero" headline does not.)
 
-Bump the `?v=` cache buster on the `style.css` link in `contact.html` whenever the
-stylesheet changes.
+Bump the `?v=` cache buster on every `style.css` link (index, encuesta2026, contact, 404)
+whenever the stylesheet changes.
+
+## Hosting
+
+GitHub Pages (`CNAME`), no build step. `/foo` resolves to `foo.html`; `/foo/` does not,
+so `404.html` redirects `/encuesta2026/` to `/encuesta2026`, keeping `?src=`.
+Placeholders still to fill before launch are listed in `CHANGES.md`.
