@@ -682,9 +682,155 @@ h3 {
   .hero__visual { order: -1; }
 
   /* En móvil se ocultan los enlaces, pero el selector de idioma y el CTA se quedan. */
-  .nav__links li:not(:last-child):not(.nav__lang) { display: none; }
+  .nav__links li:not(:last-child):not(.nav__lang):not(.nav__keep) { display: none; }
   .nav__links { gap: 14px; }
 
   .steps__list::before { display: none; }
   .step { gap: 16px; }
+}
+
+/* ─── Landing pages (index.html, encuesta2026.html) ────────────────── */
+/* Reutilizan .nav, .container, .btn, .steps y .footer de arriba. Lo de aquí
+   es solo lo que esas dos páginas necesitan y el resto del sitio no. */
+.lp-hero {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0 80px;
+}
+.lp-hero h1 {
+  max-width: 820px;
+  margin-bottom: 22px;
+}
+.lp-hero__sub {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+.lp-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 28px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-bottom: 20px;
+}
+
+/* Enlace de texto secundario: subrayado y pizarra, no púrpura. */
+.text-link {
+  color: var(--text);
+  font-weight: 600;
+  font-size: .95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border2);
+}
+.text-link:hover { text-decoration-color: currentColor; }
+
+.lp-section { padding: 88px 0; background: var(--white); }
+.lp-section--alt { background: var(--surface); }
+.lp-section h2 { margin-bottom: 18px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.lp-section p { color: var(--muted); font-size: 1.02rem; max-width: 680px; }
+.lp-section p + p { margin-top: 14px; }
+.lp-section .section-sub { margin-bottom: 44px; }
+
+/* Tarjetas de módulos: la base es .feature-card; el estado va en una etiqueta. */
+.module-card { display: flex; flex-direction: column; }
+.module-card:hover { transform: none; box-shadow: var(--shadow-sm); }
+.module-card h3 { font-size: 1.15rem; }
+.module-card .text-link { margin-top: 16px; font-size: .9rem; }
+.status {
+  align-self: flex-start;
+  font-size: .74rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  background: var(--blue-light);
+}
+.status--live { color: var(--text); background: var(--white); border-color: var(--text); }
+
+.lp-section .steps__list { margin-inline: 0; }
+.control-note {
+  margin-top: 40px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--navy);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--text) !important;
+  font-weight: 500;
+}
+
+.founder {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+.founder__photo {
+  flex-shrink: 0;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--blue-light);
+  border: 1px solid var(--border);
+}
+.founder__name { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+
+.cta-band { background: var(--navy); padding: 80px 0; text-align: center; }
+.cta-band h2 { color: var(--white); margin-bottom: 28px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
+
+/* Encuesta: un solo botón grande y la letra pequeña que lo acompaña. */
+.btn--wa { font-size: 1.05rem; padding: 16px 30px; gap: 10px; }
+.btn--wa svg { width: 22px; height: 22px; flex-shrink: 0; }
+.fine-print {
+  margin-top: 16px;
+  font-size: .85rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 520px;
+}
+.fine-print a { color: var(--text); }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* Móvil: canal de 16px y un hero que cabe sin hacer scroll en 390×844. */
+@media (max-width: 600px) {
+  .container { padding-inline: 16px; }
+  .nav__inner { padding-block: 12px; }
+  .nav__logo-img { height: 30px; }
+  .footer .nav__logo-img { height: 40px; }
+  .lp-hero { padding: 32px 0 48px; }
+  .lp-hero h1 { font-size: 2rem; margin-bottom: 16px; }
+  .lp-hero__sub { font-size: 1.02rem; margin-bottom: 26px; }
+  .eyebrow { margin-bottom: 14px; }
+  .lp-section { padding: 60px 0; }
+  .btn--wa { width: 100%; justify-content: center; white-space: normal; }
+  .founder { flex-direction: column; gap: 18px; }
+  .founder__photo { width: 88px; height: 88px; }
+  .feature-card { padding: 24px; }
 }
