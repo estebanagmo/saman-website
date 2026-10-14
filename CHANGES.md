@@ -3,7 +3,7 @@
 Ads start **Monday 19 Oct 2026**. Find everything left with:
 
 ```bash
-grep -rn "PLACEHOLDER\|WHATSAPP_NUMBER\|LINKEDIN_\|ESTEBAN_\|VOICE_TRANSCRIPTION\|TODO(Esteban)" --include=*.html .
+grep -rn "PLACEHOLDER\|WHATSAPP_NUMBER\|LINKEDIN_\|VOICE_TRANSCRIPTION\|TODO(Esteban)" --include=*.html .
 ```
 
 | Placeholder | Where | What goes there |
@@ -11,9 +11,6 @@ grep -rn "PLACEHOLDER\|WHATSAPP_NUMBER\|LINKEDIN_\|ESTEBAN_\|VOICE_TRANSCRIPTION
 | `WHATSAPP_NUMBER` | `encuesta2026.html`: the `href` on `#wa-btn` and `CONFIG.WHATSAPP_NUMBER` | The "Saman Research" line: digits only, with country code, no `+` (e.g. `573001234567`) |
 | `LINKEDIN_PARTNER_ID` | `index.html`, `encuesta2026.html`: in the `<script>` and in the `<noscript>` pixel (2 per page) | Partner ID from Campaign Manager. Until it's a number the tag doesn't load at all |
 | `LINKEDIN_CONVERSION_ID` | `encuesta2026.html`: `CONFIG` | Conversion ID from Campaign Manager. Until it's a number the click isn't tracked (the button still works) |
-| `assets/images/esteban.jpg` | `index.html`, `encuesta2026.html` | Square photo, 300×300 or larger. While it's missing the photo is just left out |
-| `ESTEBAN_APELLIDO` | `index.html`, `encuesta2026.html` (shown on the page) | Your surname |
-| `ESTEBAN_LINKEDIN_URL` | `index.html`, `encuesta2026.html` | Full LinkedIn profile URL |
 | `VOICE_TRANSCRIPTION_VENDOR` | `privacidad.html`, `privacy.html` (shown in the table) | Name of the transcription provider. If it isn't in the US, change the "Dónde"/"Location" cell too |
 | `TODO(Esteban)` | `privacidad.html`, `privacy.html`, section 10 | Have a lawyer review it for MX, CL, PE, AR and Central America |
 | `assets/images/og-saman.png` | all pages | A simple logo-on-background image is already there. Replace it if you like (keep 1200×630) |
