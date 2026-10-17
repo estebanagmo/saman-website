@@ -18,6 +18,7 @@
   --border2:    #dcdcec;
   --blue-light: #f0f0f8;
   --white:      #ffffff;
+  --brand:      'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;  /* títulos y logo */
   --radius-sm:  6px;
   --radius:     10px;
   --radius-lg:  16px;
@@ -43,18 +44,21 @@ body {
 }
 
 /* ─── Typography ───────────────────────────────────────────────────── */
+/* Títulos y logo en Plus Jakarta Sans; el texto corrido sigue en Inter. Las páginas que no
+   cargan Plus Jakarta (contacto, 404) caen a Inter. */
+h1, h2, h3, .founder__name { font-family: var(--brand); }
 h1 {
   font-size: clamp(2.2rem, 5.5vw, 3.75rem);
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -.03em;
+  letter-spacing: -.025em;
   color: var(--text);
 }
 .contact-hero h1 { color: var(--white); }
 h2 {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 700;
-  letter-spacing: -.025em;
+  letter-spacing: -.02em;
   color: var(--text);
 }
 h3 {
@@ -151,6 +155,21 @@ h3 {
   width: auto;
   display: block;
 }
+/* Logo tipográfico: el árbol (logo-arbol.png) + "Samán" en Plus Jakarta Sans. */
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: .25em;
+  font-family: var(--brand);
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -.035em;
+  line-height: 1;
+  color: var(--text);
+  white-space: nowrap;
+}
+.wordmark img { height: 1.1em; width: auto; display: block; transform: translateY(.02em); }
+.footer .nav__logo.wordmark { font-size: 2.4rem; }
 .nav__links {
   display: flex;
   align-items: center;
@@ -826,6 +845,8 @@ h3 {
   .nav__inner { padding-block: 12px; }
   .nav__logo-img { height: 30px; }
   .footer .nav__logo-img { height: 40px; }
+  .wordmark { font-size: 1.5rem; }
+  .footer .nav__logo.wordmark { font-size: 1.7rem; }
   .lp-hero { padding: 32px 0 48px; }
   .lp-hero h1 { font-size: 2rem; margin-bottom: 16px; }
   .lp-hero__sub { font-size: 1.02rem; margin-bottom: 26px; }

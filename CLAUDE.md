@@ -149,6 +149,16 @@ banner `#ede9fe`, "Disponible" pill border and text-link underline `#c7c4f6`.
 Bump the `?v=` cache buster on every `style.css` link (index, encuesta2026,
 encuesta2026-datos, contact, 404) whenever the stylesheet changes.
 
+## Typography and logo
+
+Body text is Inter. Headings (`h1`–`h3`, `.founder__name`) and the logo use Plus Jakarta Sans
+through the `--brand` token in `style.css`; only `index`, `encuesta2026` and
+`encuesta2026-datos` load it from Google Fonts, so contact, 404 and the legal pages still
+fall back to Inter. On those three pages the logo is typed, not an image:
+`<a class="nav__logo wordmark"><img src="assets/images/logo-arbol.png" alt="">Samán</a>`
+(the tree, cropped from `logo-saman.png`, plus live text at 700, −0.035em). The other pages
+still use the old `logo-saman.png` wordmark.
+
 ## Hosting
 
 GitHub Pages (`CNAME`), no build step. `/foo` resolves to `foo.html`; `/foo/` does not,
