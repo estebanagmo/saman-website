@@ -1,28 +1,29 @@
 /* ─── Reset & base ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Paleta compartida con la app Samán (design-system.md — "SaaS Pulido").
+/* Paleta "Tinta índigo" (2026-10): la del design system de la app ("SaaS Pulido")
+   con el negro y la pizarra llevados a un índigo muy oscuro.
    Reglas: el púrpura --indigo marca SOLO controles que ejecutan algo;
-   los rellenos oscuros usan pizarra --navy, nunca negro. */
+   los rellenos oscuros usan --navy (índigo tinta), nunca negro. */
 :root {
-  --navy:       #4b4e58;  /* pizarra — rellenos oscuros (footer, hero de contacto) */
+  --navy:       #262451;  /* índigo tinta — rellenos oscuros (hero de contacto, pasos) */
   --indigo:     #4f46e5;  /* púrpura — SOLO acciones */
   --indigo-dark:#4338ca;
-  --cyan:       #6b6f7b;
-  --text:       #17181c;
-  --body:       #4b4e58;
-  --muted:      #6b6f7b;
-  --surface:    #f7f8fa;
-  --border:     #e8e9ee;
-  --border2:    #dcdee6;
-  --blue-light: #f1f2f6;
+  --cyan:       #6a6e88;
+  --text:       #262451;
+  --body:       #4d5170;
+  --muted:      #6a6e88;
+  --surface:    #f7f7fc;
+  --border:     #e9e9f3;
+  --border2:    #dcdcec;
+  --blue-light: #f0f0f8;
   --white:      #ffffff;
   --radius-sm:  6px;
   --radius:     10px;
   --radius-lg:  16px;
-  --shadow-sm:  0 2px 8px rgba(23,24,28,.05);
-  --shadow:     0 8px 32px rgba(23,24,28,.08);
-  --shadow-lg:  0 24px 64px rgba(23,24,28,.10);
+  --shadow-sm:  0 2px 8px rgba(38,36,81,.05);
+  --shadow:     0 8px 32px rgba(38,36,81,.08);
+  --shadow-lg:  0 24px 64px rgba(38,36,81,.10);
 }
 
 html { scroll-behavior: smooth; }
@@ -280,7 +281,7 @@ h3 {
   max-width: 500px;
 }
 
-.hero__screenshot-frame img { width: 100%; display: block; filter: drop-shadow(0 16px 40px rgba(23,24,28,.14)); }
+.hero__screenshot-frame img { width: 100%; display: block; filter: drop-shadow(0 16px 40px rgba(38,36,81,.14)); }
 .hero__screenshot-placeholder {
   display: none;
   height: 280px;
@@ -331,7 +332,7 @@ h3 {
 }
 
 .vp-row__image { display: flex; align-items: center; justify-content: center; }
-.vp-row__image img { width: 100%; max-width: 480px; height: auto; filter: drop-shadow(0 16px 40px rgba(23,24,28,.10)); }
+.vp-row__image img { width: 100%; max-width: 480px; height: auto; filter: drop-shadow(0 16px 40px rgba(38,36,81,.10)); }
 
 .vp-placeholder {
   width: 100%;
@@ -538,7 +539,7 @@ h3 {
   font-size: 1rem;
   position: relative;
   z-index: 1;
-  box-shadow: 0 0 0 6px var(--surface), 0 4px 16px rgba(23,24,28,.12);
+  box-shadow: 0 0 0 6px var(--surface), 0 4px 16px rgba(38,36,81,.12);
 }
 
 .step__body { padding-top: 14px; }
@@ -651,9 +652,9 @@ h3 {
 
 /* ─── Footer ───────────────────────────────────────────────────────── */
 .footer {
-  background: var(--navy);
+  background: #f3f3fa;
   padding: 32px 0;
-  border-top: 1px solid rgba(255,255,255,.06);
+  border-top: 1px solid var(--border);
 }
 .footer__inner {
   display: flex;
@@ -662,15 +663,15 @@ h3 {
   flex-wrap: wrap;
   gap: 12px;
 }
-.footer .nav__logo { color: var(--white); font-size: 1.2rem; }
+.footer .nav__logo { color: var(--text); font-size: 1.2rem; }
 .footer .nav__logo-img { height: 56px; }
-.footer__copy { color: rgba(255,255,255,.5); font-size: .82rem; }
+.footer__copy { color: var(--muted); font-size: .82rem; }
 .footer__legal {
-  color: rgba(255,255,255,.5);
+  color: var(--muted);
   text-decoration: none;
   transition: color .2s ease;
 }
-.footer__legal:hover { color: rgba(255,255,255,.85); text-decoration: underline; }
+.footer__legal:hover { color: var(--text); text-decoration: underline; }
 
 /* ─── Responsive ───────────────────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -737,7 +738,7 @@ h3 {
   font-size: .95rem;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--border2);
+  text-decoration-color: #c7c4f6;
 }
 .text-link:hover { text-decoration-color: currentColor; }
 
@@ -764,7 +765,7 @@ h3 {
   color: var(--muted);
   background: var(--blue-light);
 }
-.status--live { color: var(--text); background: var(--white); border-color: var(--text); }
+.status--live { color: var(--indigo); background: var(--white); border-color: #c7c4f6; }
 
 .lp-section .steps__list { margin-inline: 0; }
 .control-note {
@@ -794,8 +795,8 @@ h3 {
 }
 .founder__name { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
 
-.cta-band { background: var(--navy); padding: 80px 0; text-align: center; }
-.cta-band h2 { color: var(--white); margin-bottom: 28px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.cta-band { background: #eeedfd; padding: 80px 0; text-align: center; }
+.cta-band h2 { color: var(--text); margin-bottom: 28px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
 
 /* Encuesta: un solo botón grande y la letra pequeña que lo acompaña. */
 .btn--wa { font-size: 1.05rem; padding: 16px 30px; gap: 10px; }

@@ -111,39 +111,43 @@ def recolor(path, hex_color, out=None):
     Image.fromarray(data).save(out or path, "PNG")
     print(f"Recolored {out or path} -> {hex_color}")
 
-recolor("assets/images/logo-saman.png", "#17181c")
+recolor("assets/images/logo-saman.png", "#262451")
 ```
 
 Run with: `py recolor_logo.py` (requires Pillow: `pip install pillow`)
 
-Note: `logo-saman-white.png` is the same shape in pure white, for dark backgrounds
-(the footer) — leave it as is.
+Note: since the 2026-10 "Tinta índigo" palette every footer is light and uses
+`logo-saman.png`. `logo-saman-white.png` (pure white) is no longer referenced but is kept
+for any future dark background.
 
 ## Color palette
 
-Both pages share the app's design system ("SaaS Pulido" —
-`C:\Users\EstebanAguel\saman\design\design-system.md`). Tokens live in the `:root` of
-`assets/style.css` (used by `index.html`, `encuesta2026.html`, `contact.html`, `404.html`)
-and inline in the legal pages (`privacidad`, `privacy`, `terminos`, `terms`). Keep them in sync.
+"Tinta índigo" (2026-10): the app's design system ("SaaS Pulido" —
+`C:\Users\EstebanAguel\saman\design\design-system.md`) with the black and slate moved to a
+very dark indigo. Tokens live in the `:root` of `assets/style.css` (used by `index.html`,
+`encuesta2026.html`, `encuesta2026-datos.html`, `contact.html`, `404.html`) and inline in
+the legal pages (`privacidad`, `privacy`, `terminos`, `terms`). Keep them in sync. The
+names differ: style.css calls the purple `--indigo`/`--indigo-dark`, the legal pages
+`--action`/`--action-hover`.
 
 | Token | Hex | Role |
 |---|---|---|
-| `--action` | `#4f46e5` | Purple — action controls (buttons, active language toggle) |
-| `--action-hover` | `#4338ca` | Action hover |
-| `--text` | `#17181c` | Headings and the logo |
-| `--ink` / `--navy` | `#4b4e58` | Slate — dark fills (footer, contact hero). Never pure black. |
-| `--muted` | `#6b6f7b` | Body copy |
-| `--faint` | `#9a9eab` | Labels, timestamps |
-| `--border` | `#e8e9ee` | Dividers |
-| `--border2` | `#dcdee6` | Control borders (inputs, ghost buttons) |
-| `--surface` | `#f7f8fa` | Page background |
-| `--sel-bg` / `--blue-light` | `#f1f2f6` | Neutral selection/emphasis |
+| `--indigo` / `--action` | `#4f46e5` | Purple — buttons, the Beta chip, highlighted phrases |
+| `--indigo-dark` / `--action-hover` | `#4338ca` | Action hover |
+| `--text` | `#262451` | Headings and the logo (indigo ink, not black) |
+| `--navy` | `#262451` | Dark fills (contact hero, step numbers). Never black or slate. |
+| `--body` / `--ink` | `#4d5170` | Body text |
+| `--muted` | `#6a6e88` | Secondary copy, footer text |
+| `--border` | `#e9e9f3` | Dividers |
+| `--border2` | `#dcdcec` | Control borders (inputs, ghost buttons) |
+| `--surface` | `#f7f7fc` | Lavender-tinted page background |
+| `--sel-bg` / `--blue-light` | `#f0f0f8` | Neutral selection/emphasis |
 
-The app reserves purple strictly for action controls. (The old homepage headline broke
-that rule with a purple word; the 2026-10 "back-office financiero" headline does not.)
+Fixed values outside the tokens: footer `#f3f3fa`, closing CTA band `#eeedfd`, survey
+banner `#ede9fe`, "Disponible" pill border and text-link underline `#c7c4f6`.
 
-Bump the `?v=` cache buster on every `style.css` link (index, encuesta2026, contact, 404)
-whenever the stylesheet changes.
+Bump the `?v=` cache buster on every `style.css` link (index, encuesta2026,
+encuesta2026-datos, contact, 404) whenever the stylesheet changes.
 
 ## Hosting
 

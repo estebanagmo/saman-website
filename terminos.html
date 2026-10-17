@@ -30,14 +30,14 @@
     :root {
       --action:      #4f46e5;
       --action-hover:#4338ca;
-      --navy:        #4b4e58;
-      --text:        #17181c;
-      --ink:         #4b4e58;
-      --muted:       #6b6f7b;
-      --border:      #e8e9ee;
-      --border2:     #dcdee6;
-      --surface:     #f7f8fa;
-      --sel-bg:      #f1f2f6;
+      --navy:        #262451;
+      --text:        #262451;
+      --ink:         #4d5170;
+      --muted:       #6a6e88;
+      --border:      #e9e9f3;
+      --border2:     #dcdcec;
+      --surface:     #f7f7fc;
+      --sel-bg:      #f0f0f8;
     }
     body {
       font-family: 'Inter', system-ui, sans-serif;
@@ -153,7 +153,8 @@
     .callout p:last-child { margin-bottom: 0; }
 
     footer {
-      background: var(--navy);
+      background: #f3f3fa;
+      border-top: 1px solid var(--border);
       padding: 28px 0;
       margin-top: 40px;
     }
@@ -169,7 +170,7 @@
     }
     .footer-inner a { text-decoration: none; }
     .footer-inner img { height: 44px; display: block; }
-    .footer-copy { color: rgba(255,255,255,.5); font-size: 0.82rem; }
+    .footer-copy { color: var(--muted); font-size: 0.82rem; }
 
     @media (max-width: 600px) {
       .wrap, .nav-inner, .footer-inner { padding-inline: 22px; }
@@ -366,7 +367,7 @@
 
   <footer>
     <div class="footer-inner">
-      <a href="index.html"><img src="assets/images/logo-saman-white.png" alt="Samán" /></a>
+      <a href="index.html"><img src="assets/images/logo-saman.png" alt="Samán" /></a>
       <p class="footer-copy">© 2026 Samantech · Agentes para el back-office financiero</p>
     </div>
   </footer>
