@@ -25,6 +25,48 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css?v=6" />
+  <style>
+    .top-banner {
+      display: block;
+      background: #ede9fe;
+      color: #3730a3;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: .92rem;
+      font-weight: 500;
+      border-bottom: 1px solid #ddd6fe;
+      transition: background .15s;
+    }
+    .top-banner:hover { background: #e4dcfd; }
+    .top-banner__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 16px;
+      text-align: center;
+      line-height: 1.35;
+    }
+    .top-banner__icon { flex: none; width: 20px; height: 20px; }
+    .top-banner__cta { font-weight: 700; white-space: nowrap; }
+    .top-banner:hover .top-banner__cta { text-decoration: underline; }
+    .beta-chip {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: var(--indigo);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      line-height: 1.2;
+      position: relative;
+      top: -3px;
+    }
+  </style>
 
   <!-- LinkedIn Insight Tag (partner ID 9875242, Campaign Manager). -->
   <script>
@@ -46,12 +88,25 @@
   <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9875242&fmt=gif" /></noscript>
 </head>
 <body>
+  <a href="encuesta2026.html" class="top-banner">
+    <div class="top-banner__inner">
+      <svg class="top-banner__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="5" y="4" width="14" height="17" rx="2" />
+        <path d="M9 4V3h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z" />
+        <path d="M8.5 10.5l1.2 1.2 2.3-2.4" />
+        <path d="M13.5 11h2" />
+        <path d="M8.5 16l1.2 1.2 2.3-2.4" />
+        <path d="M13.5 16.5h2" />
+      </svg>
+      <span>Participa en el estudio de tesorería 2026 <span class="top-banner__cta">→</span></span>
+    </div>
+  </a>
+
 
   <nav class="nav">
     <div class="nav__inner container">
       <a href="index.html" class="nav__logo"><img src="assets/images/logo-saman.png" alt="Samán" class="nav__logo-img" width="2253" height="464" /></a>
       <ul class="nav__links">
-        <li class="nav__keep"><a href="encuesta2026.html">Estudio 2026</a></li>
         <li><a href="mailto:esteban@samantech.com.co?subject=Hablemos%20sobre%20Sam%C3%A1n" class="btn btn--primary btn--sm">Hablemos</a></li>
       </ul>
     </div>
@@ -92,24 +147,23 @@
         <p class="lp-hero__sub">De las compras al recaudo, deja que nuestros agentes hagan el trabajo administrativo y enfoca a tu equipo en lo estratégico.</p>
         <div class="lp-hero__ctas">
           <a href="mailto:esteban@samantech.com.co?subject=Hablemos%20sobre%20Sam%C3%A1n" class="btn btn--primary btn--lg">Hablemos</a>
-          <a href="encuesta2026.html" class="text-link">Participa en el estudio de tesorería 2026 →</a>
         </div>
       </div>
     </section>
 
     <section class="lp-section" id="agentes">
       <div class="container">
-        <h2>Descubre nuestros agentes</h2>
+        <h2>Descubre nuestros agentes <span class="beta-chip">Beta</span></h2>
         <div class="features__grid">
           <article class="feature-card module-card">
             <span class="status status--live">Disponible</span>
             <h3>Compras</h3>
-            <p>Desde la requisición, cotización, aprobación y orden de compra, nuestros agentes gestionan tus compras. Mejora tu margen al comprar más barato, y asegúrate de que la operación tenga lo que necesita.</p>
+            <p>Agentes que gestionan tus compras, desde canalizar requisiciones, cotizar, aprobar y generar órdenes de compra. Mejora tu margen al comprar más barato, y asegúrate de que la operación tenga lo que necesita.</p>
           </article>
           <article class="feature-card module-card">
             <span class="status">En desarrollo</span>
             <h3>Crédito y cartera</h3>
-            <p>Recomendación inteligente de cupos de cartera, monitoreo de la salud de la cartera y gestión de la cobranza de facturas vencidas.</p>
+            <p>Gestiona cupos de crédito a clientes, conciliación de pagos y gestión de cartera proactiva y reactiva. Solidifica el estado de tus cuentas por cobrar, y previene dolores de cabeza en manejo de cartera.</p>
             <a href="encuesta2026.html" class="text-link">Participa en el estudio</a>
           </article>
           <article class="feature-card module-card">
@@ -124,7 +178,7 @@
     <section class="lp-section lp-section--alt">
       <div class="container">
         <h2>Hecho para empresas del sector real</h2>
-        <p>Construido para todo tipo de operaciones: manufactura, agroindustria, exportadores, distribuidores y servicios. <strong style="color: var(--indigo);">Entendemos que las operaciones son lo prioritario: nuestros agentes te ayudan con el resto.</strong></p>
+        <p>Construido para empresas productivas: manufactura, agroindustria, exportadores, distribuidores y servicios. <strong style="color: var(--indigo);">Entendemos que las operaciones son lo prioritario: nuestros agentes te ayudan con el resto.</strong></p>
       </div>
     </section>
 
