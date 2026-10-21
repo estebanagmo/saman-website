@@ -8,7 +8,6 @@ grep -rn "PLACEHOLDER\|WHATSAPP_NUMBER\|LINKEDIN_\|VOICE_TRANSCRIPTION\|TODO(Est
 
 | Placeholder | Where | What goes there |
 |---|---|---|
-| `WHATSAPP_NUMBER` | `encuesta2026.html`: the `href` on `#wa-btn`, the `href` on `#wa-link` (step 1) and `CONFIG.WHATSAPP_NUMBER` | The "Saman Research" line: digits only, with country code, no `+` (e.g. `573001234567`) |
 | `LINKEDIN_CONVERSION_ID` | `encuesta2026.html`: `CONFIG` | Conversion ID from Campaign Manager. Until it's a number the click isn't tracked (the button still works) |
 | `VOICE_TRANSCRIPTION_VENDOR` | `privacidad.html`, `privacy.html` (shown in the table) | Name of the transcription provider. If it isn't in the US, change the "Dónde"/"Location" cell too |
 | `TODO(Esteban)` | `privacidad.html`, `privacy.html`, section 10 | Have a lawyer review it for MX, CL, PE, AR and Central America |
