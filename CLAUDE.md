@@ -143,8 +143,7 @@ names differ: style.css calls the purple `--indigo`/`--indigo-dark`, the legal p
 | `--surface` | `#f7f7fc` | Lavender-tinted page background |
 | `--sel-bg` / `--blue-light` | `#f0f0f8` | Neutral selection/emphasis |
 
-Fixed values outside the tokens: footer `#f3f3fa`, closing CTA band `#eeedfd`, survey
-banner `#ede9fe`, "Disponible" pill border and text-link underline `#c7c4f6`.
+Fixed values outside the tokens: footer `#f3f3fa`, closing CTA band `#eeedfd`, "Disponible" pill border and text-link underline `#c7c4f6`.
 
 Bump the `?v=` cache buster on every `style.css` link (index, encuesta2026,
 encuesta2026-datos, contact, 404) whenever the stylesheet changes.
